@@ -5,7 +5,7 @@ class Counter extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      store: state.getState()
+      store: store.getState()
     }
   }
 
@@ -35,7 +35,9 @@ class Counter extends Component {
 
   render() {
     const {
-      currentValue
+      currentValue,
+      futureValues,
+      previousValues
     } = this.state.store;
     return (
       <div className="app">
